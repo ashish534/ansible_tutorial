@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.2"
 
-set :chruby_ruby, 'ruby-2.5.0'
+set :chruby_ruby, 'ruby-2.5.1'
 
 set :application, "ansible_tutorial"
 set :repo_url, "https://github.com/ashish534/ansible_tutorial.git"
