@@ -1,14 +1,16 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.2"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :chruby_ruby, 'ruby-2.5.0'
+
+set :application, "ansible_tutorial"
+set :repo_url, "https://github.com/ashish534/ansible_tutorial.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/home/deploy/apps"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -24,7 +26,7 @@ set :repo_url, "git@example.com:me/my_repo.git"
 # append :linked_files, "config/database.yml"
 
 # Default value for linked_dirs is []
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
